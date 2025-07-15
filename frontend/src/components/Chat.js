@@ -15,8 +15,8 @@ const Chat = ({ sessionId }) => {
     const fetchHistory = async () => {
       try {
         const url = sessionId
-          ? `http://localhost:5000/api/chat/history/${sessionId}`
-          : 'http://localhost:5000/api/chat/history';
+          ? `https://chat-backend-vy78.onrender.com/chat/history/${sessionId}`
+          : 'https://chat-backend-vy78.onrender.com/chat/history';
         const res = await axios.get(url, {
           headers: { Authorization: `Bearer ${token}` },
         });
