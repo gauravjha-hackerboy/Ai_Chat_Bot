@@ -13,7 +13,7 @@ const Login = () => {
     try {
       const res = await axios.post('https://chat-backend-vy78.onrender.com/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
-      navigate('/chat');
+      navigate('/api/chat');
     } catch (err) {
       setError('Login failed. Please check your credentials.');
     }
