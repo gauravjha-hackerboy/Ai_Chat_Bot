@@ -11,9 +11,9 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://chat-backend-vy78.onrender.com/auth/login', { email, password });
+      const res = await axios.post('https://chat-backend-vy78.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
-      navigate('/api/chat');
+      navigate('/chat');
     } catch (err) {
       setError('Login failed. Please check your credentials.');
     }
