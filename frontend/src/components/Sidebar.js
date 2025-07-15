@@ -13,7 +13,7 @@ const Sidebar = ({ onSelectSession, onNewSession, selectedSession }) => {
     const fetchSessions = async () => {
       try {
         setLoading(true);
-        const res = await axios.get('http://localhost:5000/api/chat/sessions', {
+        const res = await axios.get('https://chat-backend-vy78.onrender.com/chat/sessions', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setSessions(res.data.sessions || []);
