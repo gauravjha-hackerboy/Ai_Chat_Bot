@@ -80,7 +80,7 @@ const Sidebar = ({ onSelectSession, onNewSession, selectedSession }) => {
     if (newTitle === null || newTitle.trim() === '') return; // Cancelled or empty
     try {
       await axios.put(
-        `http://localhost:5000/api/chat/sessions/${sessionId}/rename`,
+        `https://chat-backend-vy78.onrender.com/chat/sessions/${sessionId}/rename`,
         { newTitle },
         { headers: { Authorization: `Bearer ${token}` } }
       );
