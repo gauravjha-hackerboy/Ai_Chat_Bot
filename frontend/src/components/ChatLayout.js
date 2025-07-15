@@ -14,7 +14,7 @@ const ChatLayout = () => {
     try {
       const token = localStorage.getItem('token');
       const res = await axios.post(
-        'http://localhost:5000/api/chat/sessions',
+        'https://chat-backend-vy78.onrender.com/chat/sessions',
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
