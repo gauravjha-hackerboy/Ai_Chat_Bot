@@ -61,7 +61,7 @@ const Sidebar = ({ onSelectSession, onNewSession, selectedSession }) => {
   const handleDelete = async (sessionId) => {
     if (!window.confirm('Are you sure you want to delete this session?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/chat/sessions/${sessionId}`, {
+      await axios.delete(`https://chat-backend-vy78.onrender.com/chat/sessions/${sessionId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSessions(sessions.filter((s) => s._id !== sessionId));
