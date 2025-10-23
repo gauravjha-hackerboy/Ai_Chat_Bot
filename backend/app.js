@@ -9,7 +9,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://ai-chat-bot-m1jb.onrender.com', // or your frontend URL
+  credentials: true
+}));
 app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/api/chat", chatRoutes);
