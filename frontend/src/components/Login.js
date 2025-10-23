@@ -15,6 +15,7 @@ const Login = () => {
       localStorage.setItem('token', res.data.token);
       navigate('/chat');
     } catch (err) {
+      console.log(err);
       setError('Login failed. Please check your credentials.');
     }
   };
