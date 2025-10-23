@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/api/chat", chatRoutes);
-app.get('/api/auth/login', (req, res) => {
+app.get('/auth/login', (req, res) => {
   res.json({ message: 'Login endpoint is working. Use POST to login.' });
 });
 mongoose
