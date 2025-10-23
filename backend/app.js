@@ -16,7 +16,7 @@ app.use(cors({
 app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/api/chat", chatRoutes);
-app.get('/', (res) => {
+app.get('/', (req, res) => {
   res.json({ message: 'welcome to backend' });
 });
 mongoose
