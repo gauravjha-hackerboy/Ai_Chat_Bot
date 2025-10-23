@@ -11,7 +11,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://chat-backend-vy78.onrender.com/api/auth/signup', { email, password });
+      const res = await axios.post('https://chat-backend-vy78.onrender.com/api/signup', { email, password });
       localStorage.setItem('token', res.data.token);
       navigate('/chat');
     } catch (err) {
